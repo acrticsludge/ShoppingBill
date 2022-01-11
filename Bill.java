@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Bill {
 	public static void main(String[] args) {
-		String pname = " ";
+		String pname = null;
 		int quantity = 0, price= 0, totalprice = 0, finaltotalprice = 0;
 		char choice = ' ';
 		Scanner sc = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class Bill {
 		quantity = sc.nextInt();
 		
 		totalprice = quantity * price;
-		finaltotalprice += totalprice;
+		finaltotalprice = finaltotalprice + totalprice;
 		
 		product.add(new Product(pname, quantity, price, totalprice));
 		System.out.println("Still want to add items?(y: yes, n: no)");
